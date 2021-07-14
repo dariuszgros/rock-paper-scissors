@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three Elements Game</title>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="game-header">
+      <h1>
+        <span class="fire-text">Fire</span>
+        <span class="water-text">Water</span>
+        <span class="grass-text">Grass</span>
+      </h1>
+      <p>Five lives | Three elements | | One wins</p>
+      <span class="fire-text">Fire</span> beats
+      <span class="grass-text">Grass</span> |
+      <span class="water-text">Water</span> beats
+      <span class="fire-text">Fire</span> |
+      <span class="grass-text">Grass</span> beats
+      <span class="water-text">Water</span> |
+    </header>
+
+    <main class="main-area">
+      <div class="elements-area">
+        <button class="fire-button element-button">
+          <img class="fire-icon" src="#" alt="Fire icon" />
+        </button>
+        <button class="water-button element-button">
+          <img class="water-icon" src="#" alt="Water icon" />
+        </button>
+        <button class="grass-button element-button">
+          <img class="grass-icon" src="#" alt="Grass icon" />
+        </button>
+      </div>
+
+      <hr />
+
+      <div class="game-output">
+        <div class="computer-actions">
+          <p class="computer-title">Enemy uses</p>
+          <img class="computer-icon" src="#" alt="Idle icon" />
+        </div>
+
+        <div class="game-results">
+          <p class="round">Round: 0</p>
+          <p class="lives">Your lives: 5 | Enemy's lives: 5</p>
+          <p class="combat-text">Battle area: Void</p>
+        </div>
+
+        <div class="game-over">
+          <p class="game-over-text"></p>
+          <button class="reload">Just one more time!</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
