@@ -8,15 +8,21 @@
     <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="game-header">
       <h1>
+        <p class="title">Game of elements</p>
         <span class="fire-text">Fire | </span>
         <span class="water-text">Water | </span>
         <span class="grass-text">Grass</span>
       </h1>
-      <p>Five lives | Two enemies | One wins</p>
       <span class="fire-text">Fire</span> beats
       <span class="grass-text">Grass</span> |
       <span class="water-text">Water</span> beats
@@ -28,17 +34,17 @@
     <main class="main-area">
       <div class="elements-area">
         <button class="fire-button element-button">
-          <img class="fire-icon" src="#" alt="Fire icon" />
+          <img class="fire-icon element-icon" src="#" alt="Fire icon" />
         </button>
         <button class="water-button element-button">
-          <img class="water-icon" src="#" alt="Water icon" />
+          <img class="water-icon element-icon" src="#" alt="Water icon" />
         </button>
         <button class="grass-button element-button">
-          <img class="grass-icon" src="#" alt="Grass icon" />
+          <img class="grass-icon element-icon" src="#" alt="Grass icon" />
         </button>
       </div>
 
-      <hr />
+      <hr class="separator"/>
 
       <div class="game-output">
         <div class="computer-actions">
@@ -48,14 +54,14 @@
 
         <div class="game-results">
           <p class="round">Round: 0</p>
-          <p class="lives">Your lives: 5 | Enemy's lives: 5</p>
+          <p class="lives">Your hp: 5 | Enemy's hp: 5</p>
           <p class="combat-text">Battle area: Void</p>
         </div>
 
-        <div class="game-over">
-          <p class="game-over-text"></p>
-          <button class="reload">Just one more time!</button>
-        </div>
+      </div>
+      <div class="game-over">
+        <p class="game-over-text"></p>
+        <button class="reload">Just one more time!</button>
       </div>
     </main>
   </body>
