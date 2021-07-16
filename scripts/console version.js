@@ -1,17 +1,11 @@
-const elementButton = document.querySelectorAll(".element-button");
-const combatText = document.querySelector(".combat-text");
-const roundsUpdate = document.querySelector(".round");
-const buttonReload = document.querySelector(".reload");
-
 function game() {
-  let round = 0;
+  let rounds = 0;
   let playerScore = 5;
   let computerScore = 5;
 
   while (playerScore > 0 && computerScore > 0) {
     playRound(playerPlay(), computerPlay());
-    roundsUpdate.innerHTML = `Round: ${round}`;
-    round++;
+    rounds++;
   }
 
   getScore();
@@ -29,39 +23,18 @@ function game() {
     console.log(
       `Your choice is wrong. As an elemental mage you cannot simply say ${playerSelection} and expect explosions...`
     );
-    console.log("Try using just fire, water, grass...");
+    console.log(
+      "Try using just fire, water, grass..."
+    );
   }
 
   function computerPlay() {
     const elements = ["fire", "water", "grass"];
     computerSelection = elements[~~(Math.random() * elements.length)];
-
-    const computerIcon = document.querySelector(".computer-icon");
-    computerIcon.classList.remove(
-      "idleIcon",
-      "fireIcon",
-      "waterIcon",
-      "grassIcon"
-    );
-    if (computerSelection == "") {
-      computerIcon.classList.add("fireIcon");
-      computerIcon.style.color = "rgb(255, 94, 0)";
-    }
-    if (computerSelection == "") {
-      computerIcon.classList.add("waterIcon");
-      computerIcon.style.color = "#12bafc";
-    }
-    if (computerSelection == "") {
-      computerIcon.classList.add("grassIcon");
-      computerIcon.style.color = "rgb(42, 185, 37)";
-    }
     return computerSelection;
   }
 
   function playRound(playerSelection, computerSelection) {
-    const gameOutput = document.querySelector(".game-results");
-    const computerActions = document.querySelector(".computer-actions");
-    
     switch (true) {
       // computer wins
       case playerSelection == "fire" && computerSelection == "water":
@@ -95,9 +68,7 @@ function game() {
 
       // a tie
       case playerSelection == computerSelection:
-        // playerScore = playerScore;
-        
-        
+        playerScore = playerScore;
         console.log(`Your enemy uses ${computerSelection}`);
         console.log(`A tie, both elements neutralise themselves.`);
         console.log(
