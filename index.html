@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Three Elements Game</title>
-    <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/393c1af625.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/393c1af625.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="game-header">
@@ -45,14 +47,11 @@
         </button>
       </div>
 
-      <hr class="separator" />
-
       <div class="game-output">
         <div class="computer-actions">
           <p class="computer-title">Enemy's element</p>
-          <i class="computer-icon"  alt="Idle icon"></i>
+          <i class="computer-icon fas fa-hat-wizard" alt="Idle icon"></i>
         </div>
-
         <div class="game-results">
           <p class="round">Round: 0</p>
           <p class="lives">Your hp: 5 | Enemy's hp: 5</p>
@@ -62,10 +61,12 @@
           </p>
         </div>
       </div>
+
       <div class="game-over">
         <p class="game-over-text"></p>
         <button class="reload">Let's start a new game!</button>
       </div>
     </main>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
