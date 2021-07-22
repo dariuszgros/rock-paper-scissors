@@ -77,7 +77,7 @@ html {
 }
 .computer-actions {
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   border-right: 3px solid #5e5e5e;
 }
 .computer-title {

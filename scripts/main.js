@@ -106,14 +106,14 @@ function gamePlay() {
         elementIcon[2].style.color = "#5e5e5e";
         playerSelection = "fire";
       } else if (element.classList.contains("water-button")) {
-        elementIcon[0].style.color = "#12bafc";
-        elementIcon[1].style.color = "#5e5e5e";
+        elementIcon[0].style.color = "#5e5e5e";
+        elementIcon[1].style.color = "#12bafc";
         elementIcon[2].style.color = "#5e5e5e";
         playerSelection = "water";
       } else if (element.classList.contains("grass-button")) {
-        elementIcon[0].style.color = "#12bafc";
+        elementIcon[0].style.color = "#5e5e5e";
         elementIcon[1].style.color = "#5e5e5e";
-        elementIcon[2].style.color = "#5e5e5e";
+        elementIcon[2].style.color = "rgb(42, 185, 37)";
         playerSelection = "grass";
       }
       roundsCounter();
