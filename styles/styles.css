@@ -76,20 +76,18 @@ html {
   border-radius: 6px;
 }
 .computer-actions {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  text-align: center;
   border-right: 3px solid #5e5e5e;
-  width: 30%;
 }
 .computer-title {
   font-size: 1.6rem;
-  margin: 15px 5px 30px 20px;
+  margin: 15px 20px 0px 20px;
 }
 .computer-icon {
   margin: 40px 40px 40px 40px;
   color: #5e5e5e;
   font-size: 7rem;
+  justify-content: center;
 }
 
 .game-results {
@@ -110,10 +108,10 @@ html {
   justify-content: center;
   flex-direction: column;
   margin-top: 10px;
-  margin: auto;
 }
 
 .game-over-text {
+  text-align: center;
   font-size: 3rem;
 }
 
@@ -124,7 +122,6 @@ html {
   border-radius: 6px;
   visibility: hidden;
   background-color: transparent;
-  transition: all .4s;
   cursor: pointer;
 }
 
