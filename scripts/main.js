@@ -1,7 +1,7 @@
 const elementButton = document.querySelectorAll(".element-button");
 const combatText = document.querySelector(".combat-text");
 const roundsUpdate = document.querySelector(".round");
-const buttonReload = document.querySelector(".reload");
+const buttonReplay = document.querySelector(".replay");
 
 let round = 0;
 let playerScore = 5;
@@ -9,14 +9,8 @@ let computerScore = 5;
 
 function roundsCounter() {
   round += 1;
-  round.textContent = `Round: ${round}`;
+  roundsUpdate.textContent = `Round: ${round}`;
   return round;
-}
-
-function gameReset() {
-  buttonReload.addEventListener("click", () => {
-    window.location.reload();
-  });
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -51,24 +45,24 @@ function playRound(playerSelection, computerSelection) {
 
 function computerPlay() {
   const elements = ["fire", "water", "grass"];
-  computerSelection = elements[~~(Math.random() * elements.length)];
+  const computerSelection = elements[~~(Math.random() * elements.length)];
   const computerIcon = document.querySelector(".computer-icon");
 
   computerIcon.classList.remove(
     "fa-hat-wizard",
-    "fa-gripfire",
     "fa-tint",
+    "fa-fire",
     "fa-leaf"
   );
   if (computerSelection == "fire") {
-    computerIcon.classList.add("fa-gripfire");
+    computerIcon.classList.add("fa-fire"); // fire not showing...
     computerIcon.style.color = "rgb(255, 94, 0)";
   }
   if (computerSelection == "water") {
     computerIcon.classList.add("fa-tint");
     computerIcon.style.color = "#12bafc";
   }
-  if (computerSelection == "leaf") {
+  if (computerSelection == "grass") {
     computerIcon.classList.add("fa-leaf");
     computerIcon.style.color = "rgb(42, 185, 37)";
   }
@@ -82,17 +76,23 @@ function gameEnd(playerScore, computerScore) {
       button.classList.add("disabled-button", "opacity");
     });
 
-    const idleIcon = document.querySelector(".computer-icon");
+    const computerIcon = document.querySelector(".computer-icon");
     computerIcon.style.opacity = "0.4";
 
-    const gameEndText = document.querySelector(".game-over-text");
+    const endGameText = document.querySelector(".game-over-text");
     if (playerScore > computerScore) {
-      combatText.textContent = "You win!";
+      endGameText.textContent = "You win!";
     } else {
-      combatText.textContent = "You lost this battle...";
+      endGameText.textContent = "You lost this battle...";
     }
-    buttonReload.style.visibility = "visible";
+    buttonReplay.style.visibility = "visible";
   }
+}
+
+function gameReset() {
+  buttonReplay.addEventListener("click", () => {
+    window.location.reload();
+  });
 }
 
 function gamePlay() {

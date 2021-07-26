@@ -76,9 +76,11 @@ html {
   border-radius: 6px;
 }
 .computer-actions {
+  display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: space-evenly;
   border-right: 3px solid #5e5e5e;
+  width: 30%;
 }
 .computer-title {
   font-size: 1.6rem;
@@ -106,15 +108,18 @@ html {
 .game-over {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin-top: 10px;
+  margin: auto;
 }
 
-.reload {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+.game-over-text {
+  font-size: 3rem;
+}
+
+.replay {
   font-size: 1.6rem;
-  width: 200px;
+  height: 5rem;
   border: 3px solid #5e5e5e;
   border-radius: 6px;
   visibility: hidden;
@@ -123,7 +128,7 @@ html {
   cursor: pointer;
 }
 
-.reload:hover{
+.replay:hover{
   background-color: #5e5e5e;
   color: #fff;
 }
