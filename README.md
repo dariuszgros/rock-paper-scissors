@@ -1,7 +1,9 @@
 # Rock-Paper-Scissors game
 This is my first more serious project involving JS, HTML and CSS.
 
-First version of this project will be console application, which later will be developed to use User Interface.
+First version of this project was a console application, but currently is available with GUI.
+
+**Live version** of the game is [here](https://dariuszgros.github.io/rock-paper-scissors/)
 
 I slightly modified genuine idea of rock/paper/scissors to include three nature elements.
 This should be more fun to play.
@@ -10,5 +12,7 @@ This should be more fun to play.
 * Refreshed knowledge of basic webpage structure;
 * Learned how to adapt functions to my needs;
 
-## To do:
-* Implement UI and make everything working together
+## Things I learned while making UI:
+* Learned how to use and adapt **Fonts Awesome Icons** to me needs.
+* Learned how to apply **CSS** to make it work better.
+* Improved my JavaScript knowledge (breaking functions into a smaller ones, calling, invoking, organization etc.)
